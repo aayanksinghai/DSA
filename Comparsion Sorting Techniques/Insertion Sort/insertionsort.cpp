@@ -20,8 +20,14 @@ void insertionsort(int a[], int n)
 
 int main()
 {
-    int arr[] = {5,14,2,19,22};
-    int length = sizeof(arr)/sizeof(arr[0]);
+    int length, arr[1000];
+    printf("Enter the number of elements to be inserted: ");
+    scanf("%d", &length);
+    
+    for(int i = 0; i < length; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
 
     insertionsort(arr, length);
 

@@ -52,16 +52,17 @@ void deletion(int a[], int length)
 
 int main()
 {
-    int arr[] = {5,3,8,12,1,8};
-    int length = sizeof(arr)/sizeof(arr[0]);
-
-    build_heap(arr, length-1);  // length - 1 is equal to largest index of array
+    int length, arr[1000];
+    printf("Enter the number of elements to be inserted: ");
+    scanf("%d", &length);
     
     for(int i = 0; i < length; i++)
     {
-        printf("%d ", arr[i]);
+        scanf("%d", &arr[i]);
     }
-    printf("\n");
+
+    build_heap(arr, length-1);  // length - 1 is equal to largest index of array
+    
     deletion(arr, length-1);
 
     for(int i = 0; i < length; i++)

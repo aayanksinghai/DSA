@@ -28,8 +28,14 @@ void selectionsort(int a[], int n)
 
 int main()
 {
-    int arr[] = {3,6,1,9,2};
-    int length = sizeof(arr)/sizeof(arr[0]);
+    int length, arr[1000];
+    printf("Enter the number of elements to be inserted: ");
+    scanf("%d", &length);
+    
+    for(int i = 0; i < length; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
     selectionsort(arr,length);
     
     for(int i = 0; i < length; i++)

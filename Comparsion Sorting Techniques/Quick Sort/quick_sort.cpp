@@ -40,11 +40,17 @@ void quicksort(int a[], int left, int right)
 
 int main()
 {
-    int arr[] = {4,8,2,6,1,9};
-    int size = sizeof(arr)/sizeof(arr[0]);
-    quicksort(arr, 0, size-1);
+    int length, arr[1000];
+    printf("Enter the number of elements to be inserted: ");
+    scanf("%d", &length);
+    
+    for(int i = 0; i < length; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    quicksort(arr, 0, length-1);
 
-    for(int i = 0; i < size; i++)
+    for(int i = 0; i < length; i++)
     {
         printf("%d ", arr[i]);
     }

@@ -26,8 +26,14 @@ void bubsort(int arr[], int n)
 
 int main()
 {
-    int arr[] = {4,2,7,9,1};
-    int length = sizeof(arr)/sizeof(arr[0]);
+    int length, arr[1000];
+    printf("Enter the number of elements to be inserted: ");
+    scanf("%d", &length);
+    
+    for(int i = 0; i < length; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
     bubsort(arr, length);
 
     for(int i = 0; i < length; i++)
